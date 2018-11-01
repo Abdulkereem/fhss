@@ -1,0 +1,229 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px blue; 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: brown;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.sidebar {
+  width: 25%;
+  height: 100%;
+  background-image: url('../side-bg-1.jpg');
+  background-size: cover;
+  position: fixed;
+  overflow-y: auto;
+  color: white;
+}
+.maincontent {
+  width: 75%;
+  height: 100%;
+  background: white;
+  left: 25%;
+  overflow-y: auto;
+  position: fixed;
+  padding: 10px;
+  overflow-x: hidden;
+}
+.logo {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.logo img {
+  vertical-align: middle;
+  height: 130px;
+  width: 10%; 
+}
+.lilt {
+  font-weight: 400 !important;
+  font-family: 'Assistant', sans-serif, Arial;
+}
+.img-holder a img {
+  height: 50px;
+  width: 50px;
+}
+.img-holder {
+  text-align: center
+}
+.centralise {
+  text-align: center;
+}
+.form-width {
+  width: 100%;
+}
+.btn-fixed, .dropdown-menu {
+  width: 60% !important;
+}
+.padding {
+  margin-top: 30px;
+}
+.padding-lit {
+  margin-top: 10px;
+}
+.o-padding {
+  margin-top: 5px
+}
+.mode-selector button {
+  width: 40% !important;
+}
+.fields input {
+  width: 95%;
+  height: 37px;
+  margin: 5px;
+  border-radius: 4px;
+  text-indent: 10pt;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+}
+.custom-file {
+  width: 95% !important;
+  margin: 5px;
+  text-align: left;
+  background: none !important;
+} 
+.fields {
+  width: 100%;
+  margin: 0 20%;
+  display: none;
+  margin-top: 20px;
+}
+.fields .box {
+  width: 60%;
+  background: darkcyan;
+  padding: 10px 5px 20px 5px;
+  border-radius: 10px;
+}
+.dropdown-menu {
+  background: rgba(95, 145, 245, 0.4) !important;
+}
+#mode-indicator{
+  color:  white;
+  font-size: 20pt;
+}
+.modal-form input {
+  width: 90%;
+  margin: 5px;
+  height: 37px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  text-indent: 10pt;
+}
+.modal-content {
+  background: rgba(95, 145, 245, 0.85) !important;
+}
+.pull-left {
+  float: left;
+}
+.hidden {
+  display: none;
+}
+.dob input {
+  width: 85% !important;
+  background: rgba(255, 255, 255, 0) !important;
+  height: 28px !important;
+}
+.dob label{
+  color: gray;
+}
+.dob {
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  border-radius: 4px;
+}
+@media screen and (max-width: 768px){
+  .maincontent {
+    left: 0%;
+    width: 100%;
+  }
+  .btn-fixed, .dropdown-menu {
+    width: 100% !important;
+  }
+  .logo img {
+    width: 30%; 
+  }
+  .fields div {
+    width: 100%;
+  }
+  .fields {
+    margin: 0%;
+  }
+  .fields .box {
+    width: 100%;
+  }
+  .dob input {
+    width: 80% !important;
+  }
+  .dob {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  .dob-con {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1024px){
+  .maincontent {
+    left: 0%;
+    width: 100%;
+  }
+}
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30%;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30%; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30%; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30%; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
